@@ -13,14 +13,20 @@ Installation:
 ```bash
 pip install ranger-fm
 ranger --copy-config=rc
+ranger --copy-config=rifle
 ```
 
 To enable image previews, the following lines have to be changed in the `rc.conf` file.
 
-
 ```
  73 set preview_images true
 119 set preview_images_method kitty
+```
+
+To open text files in neovim, change the following line in the `rifle.conf` file
+
+```
+ 88 mime ^text,  label editor = nvim -- "$@"
 ```
 
 ### 2. timg
